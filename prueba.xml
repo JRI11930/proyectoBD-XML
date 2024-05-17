@@ -1,0 +1,71 @@
+<inmobiliaria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="prueba.xsd">
+    <agentes>
+        <agente id_agente="a01">
+            <nombre>Hortencio</nombre>
+            <apellido>López</apellido>
+        </agente>
+        <agente id_agente="a02">
+            <nombre>María</nombre>
+            <apellido>Bermudez</apellido>
+        </agente>
+    </agentes>
+
+    <propiedades>
+        <propiedad id_propiedad="p01" id_agente="a01">
+            <direccion colonia="Col 1" calle="Av 1" numero="37" />
+            <precio> 1000000</precio>
+            <area>70</area>
+            <tipo>local</tipo>
+        </propiedad>
+        <propiedad id_propiedad="p02" id_agente="a01">
+            <direccion colonia="Col 1" calle="Av 1" numero="42" />
+            <precio> 15000000</precio>
+            <area>100</area>
+            <tipo>casa</tipo>
+        </propiedad>
+        <propiedad id_propiedad="p03" id_agente="a02">
+            <direccion colonia="Col 1" calle="Av 1" numero="64" />
+            <precio> 2000000</precio>
+            <area>80</area>
+            <tipo>departamento</tipo>
+        </propiedad>
+    </propiedades>
+
+    <contratos>
+        <contrato id_contrato="C01" id_agente="a01">
+            <f_expedicion fecha="2024-05-12" />
+            <cliente id_cliente="c01">
+                <nombre>Juan</nombre>
+                <apellido>Perez</apellido>
+                <telefono>123456789</telefono>
+                <correo>juan@correo.com</correo>
+            </cliente>
+            <propiedad id_propiedad="p01" />
+        </contrato>
+
+        <contrato id_contrato="C02" id_agente="a02">
+            <f_expedicion fecha="2023-05-12" />
+            <cliente id_cliente="c02">
+                <nombre>María</nombre>
+                <apellido>Ramírez</apellido>
+                <telefono>345656876</telefono>
+                <correo>maria@correo.com</correo>
+            </cliente>
+            <propiedad id_propiedad="p02" />
+        </contrato>
+
+        <contrato id_contrato="C03" id_agente="a02">
+            <f_expedicion fecha="2024-03-12" />
+            <cliente id_cliente="c03">
+                <nombre>Sebastián</nombre>
+                <apellido>González</apellido>
+                <telefono>453278655</telefono>
+                <correo>sebastian@correo.com</correo>
+            </cliente>
+            <propiedad id_propiedad="p03" />
+        </contrato>
+
+    </contratos>
+
+</inmobiliaria>
