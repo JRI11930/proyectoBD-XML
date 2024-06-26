@@ -1,71 +1,492 @@
 <inmobiliaria xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="prueba.xsd">
-    <agentes>
-        <agente id_agente="a01">
-            <nombre>Hortencio</nombre>
-            <apellido>López</apellido>
-        </agente>
-        <agente id_agente="a02">
-            <nombre>María</nombre>
-            <apellido>Bermudez</apellido>
-        </agente>
-    </agentes>
-
+ xsi:noNamespaceSchemaLocation="prueba.xsd">
     <propiedades>
-        <propiedad id_propiedad="p01" id_agente="a01">
-            <direccion colonia="Col 1" calle="Av 1" numero="37" />
-            <precio> 1000000</precio>
-            <area>70</area>
-            <tipo>local</tipo>
+        <propiedad>
+            <id>1</id>
+            <direccion>Calle Falsa 123</direccion>
+            <tamaño>120</tamaño>
+            <precio>200000</precio>
+            <habitaciones>3</habitaciones>
+            <tipo>Casa</tipo>
+            <estado>Disponible</estado>
+            <fecha_registro>2023-01-01</fecha_registro>
+            <descripcion>Hermosa casa en el centro de la ciudad.</descripcion>
         </propiedad>
-        <propiedad id_propiedad="p02" id_agente="a01">
-            <direccion colonia="Col 1" calle="Av 1" numero="42" />
-            <precio> 15000000</precio>
-            <area>100</area>
-            <tipo>casa</tipo>
+        <propiedad>
+            <id>2</id>
+            <direccion>Avenida Siempre Viva 742</direccion>
+            <tamaño>80</tamaño>
+            <precio>150000</precio>
+            <habitaciones>2</habitaciones>
+            <tipo>Departamento</tipo>
+            <estado>Vendida</estado>
+            <fecha_registro>2023-02-01</fecha_registro>
+            <descripcion>Departamento con excelente vista.</descripcion>
         </propiedad>
-        <propiedad id_propiedad="p03" id_agente="a02">
-            <direccion colonia="Col 1" calle="Av 1" numero="64" />
-            <precio> 2000000</precio>
-            <area>80</area>
-            <tipo>departamento</tipo>
+        <propiedad>
+            <id>3</id>
+            <direccion>Calle del Sol 456</direccion>
+            <tamaño>150</tamaño>
+            <precio>300000</precio>
+            <habitaciones>4</habitaciones>
+            <tipo>Casa</tipo>
+            <estado>Disponible</estado>
+            <fecha_registro>2023-03-01</fecha_registro>
+            <descripcion> Hermosa casa en el barrio de los árboles.</descripcion>
+        </propiedad>
+        <propiedad>
+            <id>4</id>
+            <direccion>Avenida de la Paz 123</direccion>
+            <tamaño>100</tamaño>
+            <precio>180000</precio>
+            <habitaciones>3</habitaciones>
+            <tipo>Departamento</tipo>
+            <estado>Vendida</estado>
+            <fecha_registro>2023-04-01</fecha_registro>
+            <descripcion>Departamento con vista al parque.</descripcion>
+        </propiedad>
+        <propiedad>
+            <id>5</id>
+            <direccion>Calle de la Luna 789</direccion>
+            <tamaño>200</tamaño>
+            <precio>400000</precio>
+            <habitaciones>5</habitaciones>
+            <tipo>Casa</tipo>
+            <estado>Vendida</estado>
+            <fecha_registro>2023-05-01</fecha_registro>
+            <descripcion>Gran casa en el barrio de la luna.</descripcion>
+        </propiedad>
+        <propiedad>
+            <id>6</id>
+            <direccion>Avenida del Mar 456</direccion>
+            <tamaño>120</tamaño>
+            <precio>220000</precio>
+            <habitaciones>3</habitaciones>
+            <tipo>Departamento</tipo>
+            <estado>Vendida</estado>
+            <fecha_registro>2023-06-01</fecha_registro>
+            <descripcion>Departamento con vista al mar.</descripcion>
+        </propiedad>
+        <propiedad>
+            <id>7</id>
+            <direccion>Calle del Sol 901</direccion>
+            <tamaño>180</tamaño>
+            <precio>350000</precio>
+            <habitaciones>4</habitaciones>
+            <tipo>Casa</tipo>
+            <estado>Disponible</estado>
+            <fecha_registro>2023-07-01</fecha_registro>
+            <descripcion> Hermosa casa en el barrio del sol.</descripcion>
+        </propiedad>
+        <propiedad>
+            <id>8</id>
+            <direccion>Calle del Sol 901</direccion>
+            <tamaño>180</tamaño>
+            <precio>350000</precio>
+            <habitaciones>4</habitaciones>
+            <tipo>Casa</tipo>
+            <estado>Vendida</estado>
+            <fecha_registro>2023-07-01</fecha_registro>
+            <descripcion>Hermosa casa en el barrio del sol.</descripcion>
+        </propiedad>
+        <propiedad>
+            <id>9</id>
+            <direccion>Avenida del Mar 789</direccion>
+            <tamaño>150</tamaño>
+            <precio>280000</precio>
+            <habitaciones>3</habitaciones>
+            <tipo>Departamento</tipo>
+            <estado>Vendida</estado>
+            <fecha_registro>2023-08-01</fecha_registro>
+            <descripcion>Departamento con vista al mar.</descripcion>
+        </propiedad>
+        <propiedad>
+            <id>10</id>
+            <direccion>Calle Falsa 123</direccion>
+            <tamaño>120</tamaño>
+            <precio>200000</precio>
+            <habitaciones>3</habitaciones>
+            <tipo>Casa</tipo>
+            <estado>Disponible</estado>
+            <fecha_registro>2023-09-01</fecha_registro>
+            <descripcion>Hermosa casa en el centro de la ciudad.</descripcion>
+        </propiedad>
+        <propiedad>
+            <id>11</id>
+            <direccion>Avenida Siempre Viva 742</direccion>
+            <tamaño>80</tamaño>
+            <precio>150000</precio>
+            <habitaciones>2</habitaciones>
+            <tipo>Departamento</tipo>
+            <estado>Vendida</estado>
+            <fecha_registro>2023-10-01</fecha_registro>
+            <descripcion>Departamento con excelente vista.</descripcion>
+        </propiedad>
+        <propiedad>
+            <id>12</id>
+            <direccion>Calle del Sol 456</direccion>
+            <tamaño>150</tamaño>
+            <precio>300000</precio>
+            <habitaciones>4</habitaciones>
+            <tipo>Casa</tipo>
+            <estado>Disponible</estado>
+            <fecha_registro>2023-11-01</fecha_registro>
+            <descripcion> Hermosa casa en el barrio de los árboles.</descripcion>
         </propiedad>
     </propiedades>
 
+    <clientes>
+        <cliente>
+            <id>1</id>
+            <nombre>Juan Pérez</nombre>
+            <email>juan.perez@gmail.com</email>
+            <telefono>5547582942</telefono>
+            <direccion>Calle Real 456</direccion>
+            <preferencias>
+                <tipo>Casa</tipo>
+                <rango_precio>150000-250000</rango_precio>
+                <habitaciones>3</habitaciones>
+            </preferencias>
+        </cliente>
+        <cliente>
+            <id>2</id>
+            <nombre>María López</nombre>
+            <email>maria.lopez@gmail.com</email>
+            <telefono>5532758178</telefono>
+            <direccion>Avenida Central 789</direccion>
+            <preferencias>
+                <tipo>Departamento</tipo>
+                <rango_precio>100000-200000</rango_precio>
+                <habitaciones>2</habitaciones>
+            </preferencias>
+        </cliente>
+        <cliente>
+            <id>3</id>
+            <nombre>José Rodríguez</nombre>
+            <email>jrodriguez@gmail.com</email>
+            <telefono>5547582942</telefono>
+            <direccion>Calle Real 456</direccion>
+            <preferencias>
+                <tipo>Casa</tipo>
+                <rango_precio>150000-250000</rango_precio>
+                <habitaciones>3</habitaciones>
+            </preferencias>
+        </cliente>
+        <cliente>
+            <id>4</id>
+            <nombre>Sofía Gómez</nombre>
+            <email>sofia.gomez@gmail.com</email>
+            <telefono>5547582942</telefono>
+            <direccion>Calle Falsa 789</direccion>
+            <preferencias>
+                <tipo>Casa</tipo>
+                <rango_precio>150000-250000</rango_precio>
+                <habitaciones>3</habitaciones>
+            </preferencias>
+        </cliente>
+        <cliente>
+            <id>5</id>
+            <nombre>Luis Hernández</nombre>
+            <email>luis.hernandez@gmail.com</email>
+            <telefono>5532758178</telefono>
+            <direccion>Avenida Siempre Viva 456</direccion>
+            <preferencias>
+                <tipo>Departamento</tipo>
+                <rango_precio>100000-200000</rango_precio>
+                <habitaciones>2</habitaciones>
+            </preferencias>
+        </cliente>
+        <cliente>
+            <id>6</id>
+            <nombre>Andrés Martínez</nombre>
+            <email>andres.martinez@gmail.com</email>
+            <telefono>5547582942</telefono>
+            <direccion>Calle Real 123</direccion>
+            <preferencias>
+                <tipo>Casa</tipo>
+                <rango_precio>150000-250000</rango_precio>
+                <habitaciones>3</habitaciones>
+            </preferencias>
+        </cliente>
+        <cliente>
+            <id>7</id>
+            <nombre>Lucía Sánchez</nombre>
+            <email>lucia.sanchez@gmail.com</email>
+            <telefono>5531658290</telefono>
+            <direccion>Avenida Central 789</direccion>
+            <preferencias>
+                <tipo>Departamento</tipo>
+                <rango_precio>100000-200000</rango_precio>
+                <habitaciones>2</habitaciones>
+            </preferencias>
+        </cliente>
+        <cliente>
+            <id>8</id>
+            <nombre>Rodrigo Díaz</nombre>
+            <email>rodrigo.diaz@gmail.com</email>
+            <telefono>5587968856</telefono>
+            <direccion>Calle Falsa 456</direccion>
+            <preferencias>
+                <tipo>Casa</tipo>
+                <rango_precio>150000-250000</rango_precio>
+                <habitaciones>3</habitaciones>
+            </preferencias>
+        </cliente>
+    
+        <cliente>
+            <id>9</id>
+            <nombre>Alejandro Gómez</nombre>
+            <email>alejandro.gomez@gmail.com</email>
+            <telefono>5547582942</telefono>
+            <direccion>Calle Falsa 789</direccion>
+            <preferencias>
+                <tipo>Casa</tipo>
+                <rango_precio>150000-250000</rango_precio>
+                <habitaciones>3</habitaciones>
+            </preferencias>
+        </cliente>
+        <cliente>
+            <id>10</id>
+            <nombre>Silvia Hernández</nombre>
+            <email>silvia.hernandez@gmail.com</email>
+            <telefono>5532758178</telefono>
+            <direccion>Avenida Siempre Viva 456</direccion>
+            <preferencias>
+                <tipo>Departamento</tipo>
+                <rango_precio>100000-200000</rango_precio>
+                <habitaciones>2</habitaciones>
+            </preferencias>
+        </cliente>
+        <cliente>
+            <id>11</id>
+            <nombre>Fernando Martínez</nombre>
+            <email>fernando.martinez@gmail.com</email>
+            <telefono>5547582942</telefono>
+            <direccion>Calle Real 123</direccion>
+            <preferencias>
+                <tipo>Casa</tipo>
+                <rango_precio>150000-250000</rango_precio>
+                <habitaciones>3</habitaciones>
+            </preferencias>
+        </cliente>
+        <cliente>
+            <id>12</id>
+            <nombre>Marcela Sánchez</nombre>
+            <email>marcela.sanchez@gmail.com</email>
+            <telefono>5531658290</telefono>
+            <direccion>Avenida Central 789</direccion>
+            <preferencias>
+                <tipo>Departamento</tipo>
+                <rango_precio>100000-200000</rango_precio>
+                <habitaciones>2</habitaciones>
+            </preferencias>
+        </cliente>
+        <cliente>
+            <id>13</id>
+            <nombre>Rafael Díaz</nombre>
+            <email>rafael.diaz@gmail.com</email>
+            <telefono>5587968856</telefono>
+            <direccion>Calle Falsa 456</direccion>
+            <preferencias>
+                <tipo>Casa</tipo>
+                <rango_precio>150000-250000</rango_precio>
+                <habitaciones>3</habitaciones>
+            </preferencias>
+        </cliente>
+        <cliente>
+            <id>14</id>
+            <nombre>Diego Torres</nombre>
+            <email>diego.torres@gmail.com</email>
+            <telefono>5547582942</telefono>
+            <direccion>Calle Falsa 789</direccion>
+            <preferencias>
+                <tipo>Casa</tipo>
+                <rango_precio>150000-250000</rango_precio>
+                <habitaciones>3</habitaciones>
+            </preferencias>
+        </cliente>
+        <cliente>
+            <id>15</id>
+            <nombre>Paula Gutiérrez</nombre>
+            <email>paula.gutierrez@gmail.com</email>
+            <telefono>5532758178</telefono>
+            <direccion>Avenida Siempre Viva 456</direccion>
+            <preferencias>
+                <tipo>Departamento</tipo>
+                <rango_precio>100000-200000</rango_precio>
+                <habitaciones>2</habitaciones>
+            </preferencias>
+        </cliente>
+    </clientes>
+
+    <agentes>
+        <agente>
+            <id>1</id>
+            <nombre>María García</nombre>
+            <email>maria.garcia@gmail.com</email>
+            <telefono>5531658290</telefono>
+            <propiedades_asignadas>
+                <propiedad_id>1</propiedad_id>
+            </propiedades_asignadas>
+        </agente>
+        <agente>
+            <id>2</id>
+            <nombre>Carlos Sánchez</nombre>
+            <email>carlos.sanchez@gmail.com</email>
+            <telefono>5587968856</telefono>
+            <propiedades_asignadas>
+                <propiedad_id>2</propiedad_id>
+            </propiedades_asignadas>
+        </agente>
+        <agente>
+            <id>3</id>
+            <nombre>Juanita López</nombre>
+            <email>juanita.lopez@gmail.com</email>
+            <telefono>5547582942</telefono>
+            <propiedades_asignadas>
+                <propiedad_id>3</propiedad_id>
+            </propiedades_asignadas>
+        </agente>
+        <agente>
+            <id>4</id>
+            <nombre>Pedro Gómez</nombre>
+            <email>pedro.gomez@gmail.com</email>
+            <telefono>5532758178</telefono>
+            <propiedades_asignadas>
+                <propiedad_id>4</propiedad_id>
+            </propiedades_asignadas>
+        </agente>
+        <agente>
+            <id>5</id>
+            <nombre>Sofía Rodríguez</nombre>
+            <email>sofia.rodriguez@gmail.com</email>
+            <telefono>5587968856</telefono>
+            <propiedades_asignadas>
+                <propiedad_id>5</propiedad_id>
+            </propiedades_asignadas>
+        </agente>
+        <agente>
+            <id>6</id>
+            <nombre>Luisa Hernández</nombre>
+            <email>luisa.hernandez@gmail.com</email>
+            <telefono>5547582942</telefono>
+            <propiedades_asignadas>
+                <propiedad_id>6</propiedad_id>
+            </propiedades_asignadas>
+        </agente>
+        <agente>
+            <id>7</id>
+            <nombre>Andrés Martínez</nombre>
+            <email>andres.martinez@gmail.com</email>
+            <telefono>5531658290</telefono>
+            <propiedades_asignadas>
+                <propiedad_id>7</propiedad_id>
+            </propiedades_asignadas>
+        </agente>
+        <agente>
+            <id>8</id>
+            <nombre>Laura Pérez</nombre>
+            <email>laura.perez@gmail.com</email>
+            <telefono>5547582942</telefono>
+            <propiedades_asignadas>
+                <propiedad_id>8</propiedad_id>
+                <propiedad_id>9</propiedad_id>
+            </propiedades_asignadas>
+        </agente>
+        
+        <agente>
+            <id>9</id>
+            <nombre>Jorge Gómez</nombre>
+            <email>jorge.gomez@gmail.com</email>
+            <telefono>5532758178</telefono>
+            <propiedades_asignadas>
+                <propiedad_id>10</propiedad_id>
+                <propiedad_id>11</propiedad_id>
+            </propiedades_asignadas>
+        </agente>
+        <agente>
+            <id>10</id>
+            <nombre>Sofía Rodríguez</nombre>
+            <email>sofia.rodriguez@gmail.com</email>
+            <telefono>5587968856</telefono>
+            <propiedades_asignadas>
+                <propiedad_id>12</propiedad_id>
+                <propiedad_id>13</propiedad_id>
+            </propiedades_asignadas>
+        </agente>
+    </agentes>
+    
     <contratos>
-        <contrato id_contrato="C01" id_agente="a01">
-            <f_expedicion fecha="2024-05-12" />
-            <cliente id_cliente="c01">
-                <nombre>Juan</nombre>
-                <apellido>Perez</apellido>
-                <telefono>123456789</telefono>
-                <correo>juan@correo.com</correo>
-            </cliente>
-            <propiedad id_propiedad="p01" />
+        <contrato>
+            <id>1</id>
+            <id_propiedad>1</id_propiedad>
+            <id_cliente>1</id_cliente>
+            <id_agente>1</id_agente>
+            <fecha_inicio>2023-01-15</fecha_inicio>
+            <fecha_fin>2024-01-15</fecha_fin>
+            <tipo>Alquiler</tipo>
+            <monto>1500</monto>
         </contrato>
-
-        <contrato id_contrato="C02" id_agente="a02">
-            <f_expedicion fecha="2023-05-12" />
-            <cliente id_cliente="c02">
-                <nombre>María</nombre>
-                <apellido>Ramírez</apellido>
-                <telefono>345656876</telefono>
-                <correo>maria@correo.com</correo>
-            </cliente>
-            <propiedad id_propiedad="p02" />
+        <contrato>
+            <id>2</id>
+            <id_propiedad>2</id_propiedad>
+            <id_cliente>2</id_cliente>
+            <id_agente>2</id_agente>
+            <fecha_inicio>2023-02-01</fecha_inicio>
+            <fecha_fin>2023-08-01</fecha_fin>
+            <tipo>Venta</tipo>
+            <monto>150000</monto>
         </contrato>
-
-        <contrato id_contrato="C03" id_agente="a02">
-            <f_expedicion fecha="2024-03-12" />
-            <cliente id_cliente="c03">
-                <nombre>Sebastián</nombre>
-                <apellido>González</apellido>
-                <telefono>453278655</telefono>
-                <correo>sebastian@correo.com</correo>
-            </cliente>
-            <propiedad id_propiedad="p03" />
+        <contrato>
+            <id>3</id>
+            <id_propiedad>3</id_propiedad>
+            <id_cliente>3</id_cliente>
+            <id_agente>3</id_agente>
+            <fecha_inicio>2023-03-01</fecha_inicio>
+            <fecha_fin>2024-03-01</fecha_fin>
+            <tipo>Alquiler</tipo>
+            <monto>2000</monto>
         </contrato>
-
+        <contrato>
+            <id>4</id>
+            <id_propiedad>4</id_propiedad>
+            <id_cliente>4</id_cliente>
+            <id_agente>4</id_agente>
+            <fecha_inicio>2023-04-15</fecha_inicio>
+            <fecha_fin>2023-10-15</fecha_fin>
+            <tipo>Venta</tipo>
+            <monto>180000</monto>
+        </contrato>
+        <contrato>
+            <id>5</id>
+            <id_propiedad>5</id_propiedad>
+            <id_cliente>5</id_cliente>
+            <id_agente>5</id_agente>
+            <fecha_inicio>2023-05-01</fecha_inicio>
+            <fecha_fin>2024-05-01</fecha_fin>
+            <tipo>Alquiler</tipo>
+            <monto>2500</monto>
+        </contrato>
+        <contrato>
+            <id>6</id>
+            <id_propiedad>6</id_propiedad>
+            <id_cliente>6</id_cliente>
+            <id_agente>6</id_agente>
+            <fecha_inicio>2023-06-01</fecha_inicio>
+            <fecha_fin>2023-12-01</fecha_fin>
+            <tipo>Venta</tipo>
+            <monto>220000</monto>
+        </contrato>
+        <contrato>
+            <id>7</id>
+            <id_propiedad>7</id_propiedad>
+            <id_cliente>7</id_cliente>
+            <id_agente>7</id_agente>
+            <fecha_inicio>2023-07-15</fecha_inicio>
+            <fecha_fin>2024-07-15</fecha_fin>
+            <tipo>Alquiler</tipo>
+            <monto>3000</monto>
+        </contrato>
     </contratos>
 
 </inmobiliaria>

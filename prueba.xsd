@@ -1,83 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Definiciones de tipos simples -->
+    <xs:simpleType name="positiveInteger">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="estadoPropiedad">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Disponible"/>
+            <xs:enumeration value="Vendida"/>
+            <xs:enumeration value="Alquilada"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipoPropiedad">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Casa"/>
+            <xs:enumeration value="Departamento"/>
+            <xs:enumeration value="Terreno"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--Validación de e-mail-->
+    <xs:simpleType name="gmailEmail">
+        <xs:restriction base="xs:string">
+            <xs:pattern value=".+@gmail\.com"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="longtel">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{10}"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Elementos principales -->
+
     <xs:element name="inmobiliaria">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="agentes">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="agente" maxOccurs="unbounded">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="nombre" type="xs:string" />
-                                        <xs:element name="apellido" type="xs:string" />
-                                    </xs:sequence>
-                                    <xs:attribute name="id_agente" type="xs:ID" use="required" />
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
                 <xs:element name="propiedades">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="propiedad" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="propiedad" maxOccurs="unbounded">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="direccion">
-                                            <xs:complexType>
-                                                <xs:attribute name="colonia" use="required" />
-                                                <xs:attribute name="calle" use="required" />
-                                                <xs:attribute name="numero" type="xs:integer"
-                                                    use="required" />
-                                            </xs:complexType>
-                                        </xs:element>
-                                        <xs:element name="precio" type="xs:string" />
-                                        <xs:element name="area" type="xs:string" />
-                                        <xs:element name="tipo" type="xs:string" />
-                                    </xs:sequence>
-                                    <xs:attribute name="id_propiedad" type="xs:ID"
-                                        use="required" />
-                                    <xs:attribute name="id_agente" type="xs:IDREF" use="required" />
-                                </xs:complexType>
-                            </xs:element>
+                            <xs:element name="id" type="positiveInteger"/>
+                            <xs:element name="direccion" type="xs:string"/>
+                            <xs:element name="tamaño" type="positiveInteger"/>
+                            <xs:element name="precio" type="positiveInteger"/>
+                            <xs:element name="habitaciones" type="positiveInteger"/>
+                            <xs:element name="tipo" type="tipoPropiedad"/>
+                            <xs:element name="estado" type="estadoPropiedad"/>
+                            <xs:element name="fecha_registro" type="xs:date"/>
+                            <xs:element name="descripcion" type="xs:string"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="contratos">
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="clientes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="cliente" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="contrato" maxOccurs="unbounded">
+                            <xs:element name="id" type="positiveInteger"/>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="email" type="xs:string"/>
+                            <xs:element name="telefono" type="longtel"/>
+                            <xs:element name="direccion" type="xs:string"/>
+                            <xs:element name="preferencias">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="f_expedicion">
-                                            <xs:complexType>
-                                                <xs:attribute name="fecha" type="xs:date"
-                                                    use="required" />
-                                            </xs:complexType>
-                                        </xs:element>
-                                        <xs:element name="cliente">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                    <xs:element name="nombre" type="xs:string" />
-                                                    <xs:element name="apellido" type="xs:string" />
-                                                    <xs:element name="telefono" type="xs:string" />
-                                                    <xs:element name="correo" type="xs:string" />
-                                                </xs:sequence>
-                                                <xs:attribute name="id_cliente" type="xs:ID"
-                                                    use="required" />
-                                            </xs:complexType>
-                                        </xs:element>
-                                        <xs:element name="propiedad">
-                                            <xs:complexType>
-                                                <xs:attribute name="id_propiedad" type="xs:IDREF"
-                                                    use="required" />
-                                            </xs:complexType>
-                                        </xs:element>
+                                        <xs:element name="tipo" type="tipoPropiedad"/>
+                                        <xs:element name="rango_precio" type="xs:string"/>
+                                        <xs:element name="habitaciones" type="positiveInteger"/>
                                     </xs:sequence>
-                                    <xs:attribute name="id_contrato" type="xs:ID"
-                                        use="required" />
-                                    <xs:attribute name="id_agente" type="xs:IDREF" use="required" />
                                 </xs:complexType>
                             </xs:element>
                         </xs:sequence>
@@ -86,4 +90,55 @@
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
+    <xs:element name="agentes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="agente" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="positiveInteger"/>
+                            <xs:element name="nombre" type="xs:string"/>
+                            <xs:element name="email" type="xs:string"/>
+                            <xs:element name="telefono" type="longtel"/>
+                            <xs:element name="propiedades_asignadas">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="propiedad_id" type="positiveInteger" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="contratos">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="contrato" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="positiveInteger"/>
+                            <xs:element name="id_propiedad" type="positiveInteger"/>
+                            <xs:element name="id_cliente" type="positiveInteger"/>
+                            <xs:element name="id_agente" type="positiveInteger"/>
+                            <xs:element name="fecha_inicio" type="xs:date"/>
+                            <xs:element name="fecha_fin" type="xs:date"/>
+                            <xs:element name="tipo" type="xs:string"/>
+                            <xs:element name="monto" type="positiveInteger"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    
 </xs:schema>
