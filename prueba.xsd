@@ -8,6 +8,12 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="habitaciones">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="estadoPropiedad">
         <xs:restriction base="xs:string">
             <xs:enumeration value="Disponible"/>
@@ -52,7 +58,7 @@
                             <xs:element name="direccion" type="xs:string"/>
                             <xs:element name="tamaño" type="positiveInteger"/>
                             <xs:element name="precio" type="positiveInteger"/>
-                            <xs:element name="habitaciones" type="positiveInteger"/>
+                            <xs:element name="habitaciones" type="habitaciones"/>
                             <xs:element name="tipo" type="tipoPropiedad"/>
                             <xs:element name="estado" type="estadoPropiedad"/>
                             <xs:element name="fecha_registro" type="xs:date"/>

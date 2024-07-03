@@ -63,3 +63,12 @@ def add_agent(root, **kwargs):
     propiedad_elem = ET.SubElement(props_elem, 'propiedad_id')
     propiedad_elem.text = str(kwargs.get('propiedad_id'))
 
+def add_contract(root, **kwargs):
+    id = generate_unique_id()
+    # Crear un nuevo elemento contrato
+    contrato_elem = ET.SubElement(root.find('contratos'), 'contrato')
+    ET.SubElement(contrato_elem, 'id').text = str(id)
+    # Agregar los subelementos con los valores proporcionados
+    for key, value in kwargs.items():
+        subelement = ET.SubElement(contrato_elem, key)
+        subelement.text = str(value)
